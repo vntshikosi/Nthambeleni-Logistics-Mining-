@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Nthambeleni Logistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html" class="active">Gallery</a></li>
+                        <li><a href="quote.html">Get Quote</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="background-image: url('Nthambeleni_Logistics-30.jpg'); height: 30vh;">
+        <div class="hero-content">
+            <h1>Our Gallery</h1>
+        </div>
+    </section>
+
+    <div class="container section">
+        <h2 class="section-title">Logistics Fleet</h2>
+        <div class="slideshow-container" id="gallery-logistics">
+            
+            <div class="mySlides fade">
+                <img src="Nthambeleni_Logistics-2.jpg" alt="Truck Fleet">
+                <div class="text">Our Modern Fleet</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Nthambeleni_Logistics-7.jpg" alt="Logistics Transport">
+                <div class="text">Long Haul Transport</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Nthambeleni_Logistics-33.jpg" alt="Trucking">
+                <div class="text">Reliable Delivery</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container section">
+        <h2 class="section-title">Mining Operations</h2>
+        <div class="slideshow-container" id="gallery-mining">
+            
+            <div class="mySlides fade">
+                <img src="Nthambeleni_Logistics-58.jpg" alt="Mining Equipment">
+                <div class="text">Yellow Metal Equipment</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Nthambeleni_Logistics-11.jpg" alt="Mining Site">
+                <div class="text">On-Site Logistics</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Nthambeleni_Logistics-16.jpg" alt="Heavy Machinery">
+                <div class="text">Heavy Lifting</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container section">
+        <h2 class="section-title">Our Team & Operations</h2>
+        <div class="slideshow-container" id="gallery-team">
+            
+            <div class="mySlides fade">
+                <img src="Nthambeleni_Logistics-20.jpg" alt="Team at Work">
+                <div class="text">Our Dedicated Team</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Nthambeleni_Logistics-30.jpg" alt="Safety First">
+                <div class="text">Safety Briefings</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-person">
+                    <h4>Mukhethwa Nthambeleni</h4>
+                    <p>Director - 072 219 5751</p>
+                </div>
+                <div class="contact-person">
+                    <h4>Mr H Mashele</h4>
+                    <p>Operations - 072 000 0000</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = [1, 1, 1];
+        let slideId = ["gallery-logistics", "gallery-mining", "gallery-team"];
+        
+        // Start slideshows
+        showSlides(1, 0);
+        showSlides(1, 1);
+        showSlides(1, 2);
+
+        // Manual Controls
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let x = document.getElementById(slideId[no]).getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex[no] = 1}    
+            if (n < 1) {slideIndex[no] = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex[no]-1].style.display = "block";  
+        }
+
+        // Automatic Movement (Every 4 seconds)
+        setInterval(function() { plusSlides(1, 0); }, 4000); 
+        setInterval(function() { plusSlides(1, 1); }, 4000); 
+        setInterval(function() { plusSlides(1, 2); }, 4000); 
+    </script>
+
+</body>
+</html>
