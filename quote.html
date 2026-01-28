@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Quote | Nthambeleni Logistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="quote.html" class="active">Get Quote</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="background-image: url('Nthambeleni_Logistics-16.jpg'); height: 35vh;">
+        <div class="hero-content">
+            <h1>Request a Quote</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="form-container">
+                <p style="margin-bottom: 20px; text-align: center;">Fill in the form below to request a quote for machinery or transport.</p>
+                
+                <form action="mailto:mbm@nthambs.co.za,info@nthambs.co.za" method="post" enctype="text/plain">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name / Company Name</label>
+                        <input type="text" id="name" name="Name" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Phone Number</label>
+                        <input type="tel" id="contact" name="Phone" required placeholder="072 123 4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="machine">Select Machinery / Service</label>
+                        <select id="machine" name="Machinery_Type" required>
+                            <option value="" disabled selected>-- Select an Option --</option>
+                            <option value="Side Tipper Truck (34 Ton)">Side Tipper Truck (34 Ton)</option>
+                            <option value="Flat Deck Truck">Flat Deck Truck</option>
+                            <option value="Excavator">Excavator</option>
+                            <option value="Grader">Grader</option>
+                            <option value="Front End Loader">Front End Loader</option>
+                            <option value="Water Tanker">Water Tanker</option>
+                            <option value="Other Logistics Service">Other Logistics Service</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">Duration (How long?)</label>
+                        <input type="text" id="duration" name="Duration" placeholder="e.g. 5 Days, 2 Months" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location (Where is the work?)</label>
+                        <input type="text" id="location" name="Location" placeholder="e.g. Middelburg, Mpumalanga" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="Details" rows="4" placeholder="Describe the job requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Send Quote Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-person">
+                    <h4>Mukhethwa Nthambeleni</h4>
+                    <p>Director</p>
+                    <p>Tel: 072 219 5751</p>
+                    <p>Email: mbm@nthambs.co.za</p>
+                </div>
+                <div class="contact-person">
+                    <h4>Mr H Mashele</h4>
+                    <p>Operations / Management</p>
+                    <p>Tel: 072 000 0000</p>
+                    <p>Email: info@nthambs.co.za</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
