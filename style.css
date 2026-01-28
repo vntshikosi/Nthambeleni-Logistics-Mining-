@@ -286,6 +286,33 @@ footer {
     animation-duration: 1.5s;
 }
 
+/* --- ADD TO BOTTOM OF STYLE.CSS --- */
+
+/* Checkbox Styling for Quote Page */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px; /* Optional: limit height if list is long */
+    overflow-y: auto;  /* Scroll if list is too long */
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.checkbox-item input {
+    width: auto; /* Overrides the 100% width from general forms */
+    margin-right: 10px;
+    transform: scale(1.2); /* Makes the actual box slightly bigger */
+}
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
