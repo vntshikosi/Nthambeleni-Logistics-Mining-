@@ -16,6 +16,13 @@
                 </div>
                 <nav class="nav-links">
                     <ul>
+
+        <nav class="nav-links">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <ul id="nav-list">
+        <li><a href="index.html">Home</a>...</li>
+    </ul>
+        </nav>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="logistics.html">Logistics</a></li>
                         <li><a href="mining.html">Mining</a></li>
@@ -162,5 +169,15 @@
         setInterval(function() { plusSlides(1, 2); }, 4000); 
     </script>
 
+    <script>
+function toggleMenu() {
+    var nav = document.getElementById("nav-list");
+    if (nav.classList.contains("show")) {
+        nav.classList.remove("show");
+    } else {
+        nav.classList.add("show");
+    }
+}
+    </script>
 </body>
 </html>
