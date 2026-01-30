@@ -360,3 +360,45 @@ footer {
         padding-bottom: 10px;
     }
 }
+
+/* Video Background Styling */
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents video from spilling out */
+    color: white;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video fills the area like a background-size: cover */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Sits on top of the video */
+    text-align: center;
+}
+
+/* Add a dark overlay so text is easier to read over the video */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust 0.4 to make it darker or lighter */
+    z-index: 1;
+}
