@@ -14,9 +14,16 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* ===== BODY BACKGROUND IMAGE ADDED ===== */
 body {
     line-height: 1.6;
     color: var(--text-color);
+
+    background-image: url("map1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Header & Navigation */
@@ -44,7 +51,7 @@ header {
 }
 
 .logo img {
-    height: 60px; /* Adjust based on your logo size */
+    height: 60px;
 }
 
 .nav-links ul {
@@ -64,34 +71,36 @@ header {
     transition: color 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover, 
+.nav-links a.active {
     color: var(--primary-color);
 }
 
 /* Hero Section */
 .hero {
-    background-color: var(--secondary-color);
-    color: var(--white);
     height: 60vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background-size: cover;
-    background-position: center;
+    color: white;
     position: relative;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5); /* Dark overlay */
+    overflow: hidden;
 }
 
 .hero-content {
     position: relative;
+    z-index: 2;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -122,7 +131,7 @@ header {
 }
 
 .whatsapp-btn {
-    background-color: #25D366; /* WhatsApp Green */
+    background-color: #25D366;
 }
 
 .whatsapp-btn:hover {
@@ -132,6 +141,7 @@ header {
 /* Sections */
 .section {
     padding: 60px 0;
+    background: rgba(255, 255, 255, 0.92); /* Makes text readable over background */
 }
 
 .section-title {
@@ -159,7 +169,7 @@ header {
     color: var(--primary-color);
 }
 
-/* Footer & Contact */
+/* Footer */
 footer {
     background: var(--secondary-color);
     color: var(--white);
@@ -184,9 +194,7 @@ footer {
     color: var(--primary-color);
 }
 
-/* --- ADD TO BOTTOM OF STYLE.CSS --- */
-
-/* Form Styling (Quote Page) */
+/* Form Styling */
 .form-container {
     max-width: 700px;
     margin: auto;
@@ -217,7 +225,7 @@ footer {
     font-size: 1rem;
 }
 
-/* Slideshow / Gallery Styling */
+/* Slideshow */
 .gallery-section {
     margin-bottom: 60px;
 }
@@ -226,7 +234,7 @@ footer {
     max-width: 800px;
     position: relative;
     margin: auto;
-    overflow: hidden; /* Hides images sliding out */
+    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -238,95 +246,34 @@ footer {
 
 .mySlides img {
     width: 100%;
-    height: 500px; /* Fixed height for consistency */
+    height: 500px;
     object-fit: cover;
 }
 
-/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     padding: 16px;
     margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
     background-color: rgba(0,0,0,0.3);
 }
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover, 
+.next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-    background: rgba(0,0,0,0.5);
-}
-
-/* Smoother Fading Animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 2.5s; /* Increased from 1.5s to 2.5s for a slower feel */
-    animation-timing-function: ease-in-out; /* Makes the movement feel natural */
-}
-
-@keyframes fade {
-    from {opacity: 0} /* Starts fully invisible for a cleaner fade-in */
-    to {opacity: 1}
-}
-
-/* --- ADD TO BOTTOM OF STYLE.CSS --- */
-
-/* Checkbox Styling for Quote Page */
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-height: 200px; /* Optional: limit height if list is long */
-    overflow-y: auto;  /* Scroll if list is too long */
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.checkbox-item input {
-    width: auto; /* Overrides the 100% width from general forms */
-    margin-right: 10px;
-    transform: scale(1.2); /* Makes the actual box slightly bigger */
-}
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-/* --- IMPROVED MOBILE NAVIGATION --- */
-
-/* Hide the menu button on desktop */
+/* Mobile Navigation */
 .menu-toggle {
     display: none;
     background: var(--primary-color);
@@ -340,12 +287,12 @@ footer {
 
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show the button on mobile */
+        display: block;
         margin: 10px auto;
     }
 
     .nav-links ul {
-        display: none; /* Hide the list by default on mobile */
+        display: none;
         flex-direction: column;
         background: #fff;
         width: 100%;
@@ -353,7 +300,6 @@ footer {
         padding: 10px 0;
     }
 
-    /* This class will be added by JavaScript when the user clicks */
     .nav-links ul.show {
         display: flex;
     }
@@ -365,46 +311,4 @@ footer {
         text-align: center;
         padding-bottom: 10px;
     }
-}
-
-/* Video Background Styling */
-.hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Prevents video from spilling out */
-    color: white;
-}
-
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures the video fills the area like a background-size: cover */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1; /* Sits on top of the video */
-    text-align: center;
-}
-
-/* Add a dark overlay so text is easier to read over the video */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Adjust 0.4 to make it darker or lighter */
-    z-index: 1;
 }
