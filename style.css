@@ -161,27 +161,29 @@ header {
 
 /* Footer & Contact */
 footer {
-    background: var(--secondary-color);
+    /* Replace 'Nthambeleni_Logistics-2.jpg' with your preferred background image */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('map1.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This creates a cool 'parallax' scrolling effect */
     color: var(--white);
-    padding: 40px 0;
+    padding: 60px 0;
     margin-top: auto;
+    border-top: 5px solid var(--primary-color); /* Adds a nice red accent line */
 }
 
-.contact-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-align: center;
+/* Ensure the titles in the footer are bright */
+footer .section-title {
+    color: var(--white) !important;
+    margin-bottom: 30px;
 }
 
-.contact-person {
-    margin: 20px;
-}
-
+/* Add a slight glow to the contact names to make them stand out */
 .contact-person h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
     color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 /* --- ADD TO BOTTOM OF STYLE.CSS --- */
