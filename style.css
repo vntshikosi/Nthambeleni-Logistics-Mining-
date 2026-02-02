@@ -162,7 +162,7 @@ header {
 /* Footer & Contact */
 /* --- UPDATED CENTERED FOOTER --- */
 footer {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
                 url('map1.jpg');
     background-size: cover;
     background-position: center;
