@@ -162,16 +162,15 @@ header {
 /* Footer & Contact */
 /* --- UPDATED CENTERED FOOTER --- */
 footer {
-    /* This creates a 70% dark red tint over your image */
-    background: linear-gradient(rgba(183, 28, 28, 0.7), rgba(183, 28, 28, 0.7)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                 url('map1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: var(--white);
     padding: 60px 0;
-    text-align: center;
-    border-top: 5px solid #0056b3; /* Changing the top border to blue as well */
+    margin-top: auto;
+    border-top: 5px solid var(--primary-color);
     
     /* This centers the overall footer content */
     text-align: center; 
@@ -192,10 +191,9 @@ footer {
 }
 
 .contact-person h4 {
-    color: #000000; 
+    color: var(--primary-color);
     font-size: 1.4rem;
     margin-bottom: 5px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 .contact-person p {
