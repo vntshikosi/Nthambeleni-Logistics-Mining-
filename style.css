@@ -192,10 +192,10 @@ footer {
 }
 
 .contact-person h4 {
-    color: #00d2ff; /* A bright, professional light blue that stands out against red */
+    color: #d32f2f; 
     font-size: 1.4rem;
     margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Helps the blue pop against the red tint */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 .contact-person p {
