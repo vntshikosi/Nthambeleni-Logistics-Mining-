@@ -160,30 +160,51 @@ header {
 }
 
 /* Footer & Contact */
+/* --- UPDATED CENTERED FOOTER --- */
 footer {
-    /* Replace 'Nthambeleni_Logistics-2.jpg' with your preferred background image */
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                 url('map1.jpg');
-    
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* This creates a cool 'parallax' scrolling effect */
+    background-attachment: fixed;
     color: var(--white);
     padding: 60px 0;
     margin-top: auto;
-    border-top: 5px solid var(--primary-color); /* Adds a nice red accent line */
+    border-top: 5px solid var(--primary-color);
+    
+    /* This centers the overall footer content */
+    text-align: center; 
 }
 
-/* Ensure the titles in the footer are bright */
-footer .section-title {
-    color: var(--white) !important;
+.contact-grid {
+    display: flex;
+    justify-content: center; /* Centers the two contact blocks horizontally */
+    align-items: center;
+    flex-wrap: wrap; /* Ensures they stack correctly on phones */
+    gap: 40px; /* Adds nice spacing between the two people */
     margin-bottom: 30px;
 }
 
-/* Add a slight glow to the contact names to make them stand out */
+.contact-person {
+    margin: 0; /* Removing old margins to let Flexbox handle it */
+    min-width: 250px;
+}
+
 .contact-person h4 {
     color: var(--primary-color);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.contact-person p {
+    margin: 3px 0;
+}
+
+/* Ensures the WhatsApp button container is centered */
+.footer-btn-container {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
 }
 
 /* --- ADD TO BOTTOM OF STYLE.CSS --- */
