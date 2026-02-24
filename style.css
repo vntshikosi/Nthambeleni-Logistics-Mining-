@@ -431,3 +431,28 @@ footer {
     background: rgba(0, 0, 0, 0.4); /* Adjust 0.4 to make it darker or lighter */
     z-index: 1;
 }
+
+/* --- SOCIAL MEDIA ICONS IN FOOTER --- */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Spacing between icons */
+    margin-top: 40px; /* Space between the quote button and icons */
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Subtle line to separate them */
+}
+
+.social-icons a {
+    color: #000000; /* Black to match your text */
+    font-size: 1.8rem; /* Size of the icons */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3); /* The light glow for readability */
+    transition: all 0.3s ease; /* Makes the hover effect smooth */
+    display: inline-block;
+}
+
+/* What happens when a mouse hovers over them or a finger taps them */
+.social-icons a:hover {
+    color: #ffffff; /* Turns white */
+    transform: translateY(-5px); /* Moves up slightly */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Darker shadow when white */
+}
