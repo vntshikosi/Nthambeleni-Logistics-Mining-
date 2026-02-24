@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Quote | Nthambeleni Logistics</title>
+    <title>Request Quote | Nthambeleni Logistics
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self';">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -208,8 +217,14 @@ function sendProfessionalEmail() {
     body += `Generated via Nthambeleni Logistics Web Portal`;
 
     // 4. Construct the Mailto link
-    const recipient = "gm@nthambs.co.za";
-    const cc = "mbm@nthambs.co.za";"ops@nthambs.co.za";
+    // Anti-Spam Email Obfuscation
+    // We break the email apart so bots scanning the code cannot find the "@" symbol easily.
+    const user1 = "gm";
+    const user2 = "mbm";"ops";
+    const domain = "nthambs.co.za";
+    
+    const recipient = user1 + "@" + domain;
+    const cc = user2 + "@" + domain;
     const subject = encodeURIComponent(`Quote Request: ${name} - ${location}`);
     const encodedBody = encodeURIComponent(body);
 
