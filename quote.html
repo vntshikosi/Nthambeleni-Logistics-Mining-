@@ -241,5 +241,13 @@ function sendProfessionalEmail() {
     window.location.href = `mailto:${recipient}?cc=${cc}&subject=${subject}&body=${encodedBody}`;
 }
 </script>
+    <script>
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        alert("Images are protected by Nthambeleni Logistics Ltd (Pty).");
+    }
+}, false);
+</script>
 </body>
 </html>
