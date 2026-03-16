@@ -456,3 +456,13 @@ footer {
     transform: translateY(-5px); /* Moves up slightly */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Darker shadow when white */
 }
+
+/* Prevents users from selecting or dragging images */
+img {
+    -webkit-user-select: none;  /* Safari */
+    -ms-user-select: none;      /* IE 10 and IE 11 */
+    user-select: none;          /* Standard syntax */
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none; /* Disables the long-press menu on iOS/Android */
+}
