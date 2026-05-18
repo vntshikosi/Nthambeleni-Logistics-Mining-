@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Use the SEO and Security tags we created earlier here -->
+    <title>Careers | Nthambeleni Logistics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Copy your Navigation Bar here -->
+
+    <section class="careers-hero">
+        <h1>Join the Nthambeleni Team</h1>
+        <p>Build your future with a leader in South African logistics and mining transport.</p>
+    </section>
+
+    <section class="job-board">
+        <h2>Current Openings</h2>
+        <div class="job-list">
+            
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h3>Code 14 Heavy Vehicle Driver</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Mpumalanga / Gauteng</p>
+                <p><i class="fas fa-clock"></i> Full-Time</p>
+                <button class="apply-btn" onclick="openApplication('Code 14 Driver')">View Details & Apply</button>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h3>Diesel Mechanic</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Workshop (Centurion)</p>
+                <p><i class="fas fa-clock"></i> Full-Time</p>
+                <button class="apply-btn" onclick="openApplication('Diesel Mechanic')">View Details & Apply</button>
+            </div>
+
+            <!-- If no jobs are available, uncomment the line below -->
+            <!-- <p class="no-jobs">No current openings. Please check back soon!</p> -->
+
+        </div>
+    </section>
+
+    <section class="cv-drop">
+        <div class="cv-container">
+            <h2>Don't see a fit?</h2>
+            <p>Send your CV to our HR database for future opportunities.</p>
+            <a href="mailto:hr@nthambs.co.za?subject=General%20Job%20Application" class="quote-btn">Email Your CV</a>
+        </div>
+    </section>
+
+    <!-- Copy your Footer here -->
+
+    <script>
+        function openApplication(jobTitle) {
+            window.location.href = `mailto:hr@nthambs.co.za?subject=Application for ${jobTitle}`;
+        }
+    </script>
+</body>
+</html>
