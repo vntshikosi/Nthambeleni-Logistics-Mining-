@@ -533,3 +533,26 @@ img {
     text-align: center;
     background: #fff;
 }
+
+/* --- CV DROP SECTION BUTTON --- */
+.cv-drop .quote-btn {
+    display: inline-block; /* Allows us to add padding and shape to the link */
+    background-color: #d32f2f; /* Nthambeleni brand red */
+    color: #ffffff; /* White text */
+    padding: 12px 30px; /* Makes the button tall and wide */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none; /* Removes the default blue link underline */
+    border-radius: 5px; /* Gives it slightly rounded corners */
+    margin-top: 15px; /* Adds space between the text and the button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle drop shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+/* What happens when a user hovers over the button */
+.cv-drop .quote-btn:hover {
+    background-color: #000000; /* Turns black on hover */
+    color: #ffffff;
+    transform: translateY(-3px); /* Moves up slightly to feel interactive */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deepens the shadow on hover */
+}
