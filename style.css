@@ -466,3 +466,70 @@ img {
     user-drag: none;
     -webkit-touch-callout: none; /* Disables the long-press menu on iOS/Android */
 }
+
+/* --- CAREERS PAGE STYLES --- */
+.careers-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Nthambeleni_Logistics-33.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.job-board {
+    padding: 60px 10%;
+    background: #f9f9f9;
+}
+
+.job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.job-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #d32f2f; /* Your brand red */
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-card h3 {
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.job-card p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.apply-btn {
+    margin-top: 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.apply-btn:hover {
+    background: #d32f2f;
+}
+
+.cv-drop {
+    padding: 60px 10%;
+    text-align: center;
+    background: #fff;
+}
